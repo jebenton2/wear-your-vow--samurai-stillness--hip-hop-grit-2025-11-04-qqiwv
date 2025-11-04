@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog - Wear Your Vow: Samurai Stillness, Hip-Hop Grit. Cinematic tees with meaning. Made by Miguel.">
+    <meta name="keywords" content="cinematic tees, fashion, streetwear, Miguel Gastin, lore-driven designs, blog">
+    <meta name="author" content="Miguel Gastin">
+    <meta property="og:title" content="Blog - Wear Your Vow: Samurai Stillness, Hip-Hop Grit">
+    <meta property="og:description" content="Cinematic tees with meaning. Made by Miguel.">
+    <meta property="og:type" content="website">
+    <title>Blog - Wear Your Vow: Samurai Stillness, Hip-Hop Grit | Cinematic Tees by Miguel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            scroll-behavior: smooth;
+        }
+        
+        .hero-overlay {
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 100%);
+        }
+        
+        .feature-card {
+            transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-8px);
+        }
+        
+        .btn-primary {
+            transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
+        }
+        
+        .btn-primary:active {
+            transform: scale(0.98);
+        }
+        
+        .accordion-item {
+            transition: all 300ms ease;
+        }
+        
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 300ms ease;
+        }
+        
+        .accordion-item.active .accordion-content {
+            max-height: 500px;
+        }
+        
+        .accordion-icon {
+            transition: transform 300ms ease;
+        }
+        
+        .accordion-item.active .accordion-icon {
+            transform: rotate(180deg);
+        }
+        
+        .testimonial-card {
+            transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .testimonial-card:hover {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            transform: translateY(-4px);
+        }
+        
+        .benefit-image {
+            transition: transform 300ms ease;
+        }
+        
+        .benefit-image:hover {
+            transform: scale(1.02);
+        }
+        
+        .mobile-menu {
+            transition: all 300ms ease;
+        }
+        
+        .mobile-menu.active {
+            display: block;
+        }
+        
+        .star-rating {
+            color: #fbbf24;
+        }
+        
+        .nav-link {
+            transition: color 300ms ease;
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #000;
+            transition: width 300ms ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .cta-section-bg {
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.3) 100%);
+        }
+
+        .blog-card {
+            transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .blog-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900 font-sans">
+    <!-- Announcement Bar -->
+    <div class="bg-gray-900 text-white py-3 px-4 text-center text-sm md:text-base">
+        <p class="flex items-center justify-center gap-2">
+            <i class="fas fa-truck"></i>
+            Fast Worldwide Shipping (5 days delivery) | 100% Satisfaction Guarantee
+        </p>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="https://jebenton2.github.io/wear-your-vow--samurai-stillness--hip-hop-grit-2025-11-04-qqiwv" class="text-2xl font-bold text-gray-900 hover:text-gray-700 transition-colors duration-300">
+                        <i class="fas fa-crown mr-2"></i>Miguel
+                    </a>
+                </div>
+
+                <!-- Back Link -->
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="https://jebenton2.github.io/wear-your-vow--samurai-stillness--hip-hop-grit-2025-11-04-qqiwv" class="nav-link text-gray-700 hover:text-gray-900 font-medium">← Back</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-button md:hidden text-gray-900 hover:text-gray-700 transition-colors duration-300" id="mobileMenuBtn">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <nav class="mobile-menu hidden md:hidden pb-4 border-t border-gray-200">
+                <a href="https://jebenton2.github.io/wear-your-vow--samurai-stillness--hip-hop-grit-2025-11-04-qqiwv" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors duration-300 rounded">← Back</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Blog Hero Section -->
+    <section class="py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 tracking-tight leading-tight">
+                    Our Blog
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed font-light max-w-3xl mx-auto">
+                    Stories, insights, and inspiration from the world of cinematic tees, meaningful fashion, and lore-driven design.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Purpose Section -->
+    <section class="py-16 md:py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gray-50 p-8 md:p-12 rounded-lg border border-gray-200">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Welcome to Our Creative Community</h2>
+                <p class="text-gray-700 leading-relaxed text-lg mb-6">
+                    This blog is your gateway to understanding the philosophy and artistry behind cinematic tees. We explore the intersection of storytelling, fashion, and personal expression—diving deep into the narratives that shape our collections and the creative process behind each design.
+                </p>
+                <p class="text-gray-700 leading-relaxed text-lg mb-6">
+                    Here you'll discover:
+                </p>
+                <ul class="space-y-3 mb-6">
+                    <li class="flex items-start gap-3">
+                        <i class="fas fa-check text-gray-900 mt-1 flex-shrink-0"></i>
+                        <span class="text-gray-700"><strong>Design Stories</strong> - Behind-the-scenes looks at how our lore-driven collections come to life</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fas fa-check text-gray-900 mt-1 flex-shrink-0"></i>
+                        <span class="text-gray-700"><strong>Philosophy & Culture</strong> - Explorations of samurai wisdom, hip-hop authenticity, and their intersection</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fas fa-check text-gray-900 mt-1 flex-shrink-0"></i>
+                        <span class="text-gray-700"><strong>Fashion Insights</strong> - Thoughts on meaningful design, collector culture, and the future of fashion</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fas fa-check text-gray-900 mt-1 flex-shrink-0"></i>
+                        <span class="text-gray-700"><strong>Community Highlights</strong> - Stories from our collectors and the global community</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fas fa-check text-gray-900 mt-1 flex-shrink-0"></i>
+                        <span class="text-gray-700"><strong>Collection Updates</strong> - News about upcoming chapters, limited releases, and exclusive drops</span>
+                    </li>
+                </ul>
+                <p class="text-gray-700 leading-relaxed text-lg">
+                    Whether you're a longtime collector or just discovering our brand, this blog is designed to deepen your connection with the art and meaning behind every tee. Join us as we explore what it means to wear your vow.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Blog Post -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8 tracking-tight">Latest Post</h2>
+            </div>
+
+            <div class="blog-card bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300">
+                <div class="p-8 md:p-12">
+                    <div class="flex items-center gap-4 mb-6">
+                        <span class="inline-block bg-gray-900 text-white px-4 py-2 rounded-lg text-sm font-semibold">Featured</span>
+                        <span class="text-gray-500 text-sm font-medium">November 4, 2025</span>
+                    </div>
+                    
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
+                        Getting Started with Our Platform
+                    </h3>
+                    
+                    <div class="prose prose-lg text-gray-700 mb-8 leading-relaxed">
+                        <p class="mb-4">
+                            Cinematic tees revolutionize fashion by merging storytelling with personal expression. This innovative approach blends samurai philosophy's disciplined stillness with hip-hop culture's raw authenticity, creating wearable narratives that transcend traditional clothing.
+                        </p>
+                        <p class="mb-4">
+                            Lore-driven collections organized into chapters transform shopping into adventure, building collector communities around interconnected stories. Limited editions create scarcity-driven value, elevating garments from disposable fast fashion to cultural investments.
+                        </p>
+                        <p>
+                            By combining film language principles, philosophical depth, and exclusive production, these designs empower wearers to express their complex identities authentically. Fashion's future belongs to meaningful storytelling over mindless consumption, where each piece represents a personal vow to live boldly and deliberately.
+                        </p>
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+                        <a href="https://jebenton2.github.io/wear-your-vow--samurai-stillness--hip-hop-grit-2025-11-04-qqiwv/blog/getting-started-with-our-platform.html" class="btn-primary inline-block bg-gray-900 text-white px-8 py-3 rounded-lg font-bold hover:bg-gray-800 transition-all duration-300">
+                            Read Full Article
+                        </a>
+                        <span class="text-gray-500 text-sm">5 min read</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upcoming Blog Posts Section -->
+    <section class="py-16 md:py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 tracking-tight">Coming Soon</h2>
+                <p class="text-lg text-gray-600">More stories and insights are on the way. Check back soon for new content.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Placeholder Card 1 -->
+                <div class="blog-card bg-white border border-gray-200 rounded-lg p-8 hover:shadow-xl transition-all duration-300">
+                    <div class="h-48 bg-gray-100 rounded-lg mb-6 flex items-center justify-center">
+                        <i class="fas fa-pen-fancy text-gray-300 text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">The Philosophy Behind Samurai Stillness</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">Exploring the ancient wisdom of samurai culture and how it influences our design philosophy...</p>
+                    <p class="text-gray-500 text-sm">Coming Soon</p>
+                </div>
+
+                <!-- Placeholder Card 2 -->
+                <div class="blog-card bg-white border border-gray-200 rounded-lg p-8 hover:shadow-xl transition-all duration-300">
+                    <div class="h-48 bg-gray-100 rounded-lg mb-6 flex items-center justify-center">
+                        <i class="fas fa-pen-fancy text-gray-300 text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Hip-Hop Culture Meets Cinematic Design</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">How authentic hip-hop aesthetics shape our approach to bold, expressive storytelling...</p>
+                    <p class="text-gray-500 text-sm">Coming Soon</p>
+                </div>
+
+                <!-- Placeholder Card 3 -->
+                <div class="blog-card bg-white border border-gray-200 rounded-lg p-8 hover:shadow-xl transition-all duration-300">
+                    <div class="h-48 bg-gray-100 rounded-lg mb-6 flex items-center justify-center">
+                        <i class="fas fa-pen-fancy text-gray-300 text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Building Your Collection: Chapter One Deep Dive</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">An in-depth look at the stories and symbolism woven into our first collection chapter...</p>
+                    <p class="text-gray-500 text-sm">Coming Soon</p>
+                </div>
+
+                <!-- Placeholder Card 4 -->
+                <div class="blog-card bg-white border border-gray-200 rounded-lg p-8 hover:shadow-xl transition-all duration-300">
+                    <div class="h-48 bg-gray-100 rounded-lg mb-6 flex items-center justify-center">
+                        <i class="fas fa-pen-fancy text-gray-300 text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">The Art of Limited Edition Fashion</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">Why scarcity matters and how limited runs create lasting value in fashion...</p>
+                    <p class="text-gray-500 text-sm">Coming Soon</p>
+                </div>
+
+                <!-- Placeholder Card 5 -->
+                <div class="blog-card bg-white border border-gray-200 rounded-lg p-8 hover:shadow-xl transition-all duration-300">
+                    <div class="h-48 bg-gray-100 rounded-lg mb-6 flex items-center justify-center">
+                        <i class="fas fa-pen-fancy text-gray-300 text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Collector Spotlight: Stories from Our Community</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">Meet the passionate collectors who are building their personal narratives with our tees...</p>
+                    <p class="text-gray-500 text-sm">Coming Soon</p>
+                </div>
+
+                <!-- Placeholder Card 6 -->
+                <div class="blog-card bg-white border border-gray-200 rounded-lg p-8 hover:shadow-xl transition-all duration-300">
+                    <div class="h-48 bg-gray-100 rounded-lg mb-6 flex items-center justify-center">
+                        <i class="fas fa-pen-fancy text-gray-300 text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">The Future of Meaningful Fashion</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">Trends in sustainable, story-driven design and what's next for conscious consumers...</p>
+                    <p class="text-gray-500 text-sm">Coming Soon</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 md:py-24 bg-gray-900 relative overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1523205771623-dbd930313e8f?w=1600&h=900&fit=crop&q=80" alt="Collection showcase background" class="w-full h-full object-cover opacity-20">
+            <div class="cta-section-bg absolute inset-0"></div>
+        </div>
+
+        <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 tracking-tight">
+                Stay Updated
+            </h2>
+            <p class="text-lg md:text-xl text-gray-100 mb-8 leading-relaxed max-w-2xl mx-auto">
+                Subscribe to our newsletter to receive the latest blog posts, collection updates, and exclusive insights directly in your inbox.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-md mx-auto">
+                <input type="email" placeholder="Enter your email" class="flex-1 px-6 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent transition-all duration-300 w-full">
+                <button class="btn-primary bg-white text-gray-900 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-all duration-300 shadow-lg whitespace-nowrap">
+                    Subscribe
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12 md:py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <!-- Company Info -->
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                        <i class="fas fa-crown"></i>Miguel
+                    </h3>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        Cinematic tees with meaning. Blending samurai philosophy with hip-hop culture to create wearable stories.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <i class="fab fa-tiktok text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="https://jebenton2.github.io/wear-your-vow--samurai-stillness--hip-hop-grit-2025-11-04-qqiwv" class="text-gray-400 hover:text-white transition-colors duration-300">Home</a>
+                        </li>
+                        <li>
+                            <a href="https://jebenton2.github.io/wear-your-vow--samurai-stillness--hip-hop-grit-2025-11-04-qqiwv#features" class="text-gray-400 hover:text-white transition-colors duration-300">Features</a>
+                        </li>
+                        <li>
+                            <a href="https://jebenton2.github.io/wear-your-vow--samurai-stillness--hip-hop-grit-2025-11-04-qqiwv#benefits" class="text-gray-400 hover:text-white transition-colors duration-300">Benefits</a>
+                        </li>
+                        <li>
+                            <a href="https://jebenton2.github.io/wear-your-vow--samurai-stillness--hip-hop-grit-2025-11-04-qqiwv#about" class="text-gray-400 hover:text-white transition-colors duration-300">About Us</a>
+                        </li>
+                        <li>
+                            <a href="https://jebenton2.github.io/wear-your-vow--samurai-stillness--hip-hop-grit-2025-11-04-qqiwv#testimonials" class="text-gray-400 hover:text-white transition-colors duration-300">Testimonials</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div>
+                    <h4 class="text-white font-bold mb-4">Resources</h4>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="https://jebenton2.github.io/wear-your-vow--samurai-stillness--hip-hop-grit-2025-11-04-qqiwv#faq" class="text-gray-400 hover:text-white transition-colors duration-300">FAQ</a>
+                        </li>
+                        <li>
+                            <a href="privacy.html" class="text-gray-400 hover:text-white transition-colors duration-300">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="terms.html" class="text-gray-400 hover:text-white transition-colors duration-300">Terms of Service</a>
+                        </li>
+                        <li>
+                            <a href="blog.html" class="text-gray-400 hover:text-white transition-colors duration-300">Blog</a>
+                        </li>
+                        <li>
+                            <a href="https://stripe.com/shop" class="text-gray-400 hover:text-white transition-colors duration-300">Shop</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-white font-bold mb-4">Contact</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-envelope text-gray-400 mt-1 flex-shrink-0"></i>
+                            <a href="mailto:contact@miguelgastin.com" class="text-gray-400 hover:text-white transition-colors duration-300">contact@miguelgastin.com</a>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-shipping-fast text-gray-400 mt-1 flex-shrink-0"></i>
+                            <span class="text-gray-400">Fast Worldwide Shipping (5 days)</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle text-gray-400 mt-1 flex-shrink-0"></i>
+                            <span class="text-gray-400">100% Satisfaction Guarantee</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="border-t border-gray-800 pt-8 mt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-gray-400 text-sm">
+                        &copy; <span id="year">2024</span> Miguel Gastin. All rights reserved. Wear Your Vow.
+                    </p>
+                    <div class="flex gap-6">
+                        <a href="privacy.html" class="text-gray-400 hover:text-white transition-colors duration-300 text-sm">Privacy</a>
+                        <a href="terms.html" class="text-gray-400 hover:text-white transition-colors duration-300 text-sm">Terms</a>
+                        <a href="blog.html" class="text-gray-400 hover:text-white transition-colors duration-300 text-sm">Blog</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', function() {
+            mobileMenu.classList.toggle('active');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileLinks = document.querySelectorAll('.mobile-menu a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.remove('active');
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Smooth scroll behavior for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && document.querySelector(href)) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Newsletter subscription
+        const subscribeBtn = document.querySelector('button:has-text("Subscribe")');
+        if (subscribeBtn) {
+            subscribeBtn.addEventListener('click', function() {
+                const emailInput = this.previousElementSibling;
+                if (emailInput && emailInput.value) {
+                    const originalText = this.textContent;
+                    this.textContent = 'Subscribed! ✓';
+                    this.classList.add('bg-green-600');
+                    this.classList.remove('bg-white');
+                    this.classList.remove('text-gray-900');
+                    this.classList.add('text-white');
+                    
+                    setTimeout(() => {
+                        this.textContent = originalText;
+                        this.classList.remove('bg-green-600');
+                        this.classList.add('bg-white');
+                        this.classList.add('text-gray-900');
+                        this.classList.remove('text-white');
+                        emailInput.value = '';
+                    }, 3000);
+                }
+            });
+        }
+    </script>
+</body>
+</html>
